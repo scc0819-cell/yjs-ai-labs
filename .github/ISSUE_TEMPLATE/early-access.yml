@@ -1,0 +1,45 @@
+name: Pro early access
+description: Help validate the first paid Control Plane release.
+title: "[Early Access] "
+labels: ["early-access", "product-validation"]
+body:
+  - type: markdown
+    attributes:
+      value: "Thanks for helping shape the product. Do not include API keys, secrets, private prompts or confidential company data."
+  - type: dropdown
+    id: stack
+    attributes:
+      label: Which AI tools do you use weekly?
+      multiple: true
+      options: [ChatGPT / Codex, Claude / Claude Code, Gemini, Local models, Other]
+    validations: {required: true}
+  - type: dropdown
+    id: spend
+    attributes:
+      label: Approximate monthly AI software spend
+      options: ["Under $20", "$20–49", "$50–99", "$100–199", "$200+"]
+    validations: {required: true}
+  - type: dropdown
+    id: pain
+    attributes:
+      label: Biggest pain today
+      options: ["Quota / limits", "Choosing the right model", "Context breaks between tools", "Too many MCP/tools in context", "Cost / ROI visibility", "Security / permissions", "Other"]
+    validations: {required: true}
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Describe the workflow you wish worked better
+      placeholder: "Example: Claude plans, Codex executes, Gemini reviews, but context and quota handoff are manual."
+    validations: {required: true}
+  - type: dropdown
+    id: wtp
+    attributes:
+      label: If this reliably solved that problem, what monthly price feels reasonable?
+      options: ["$0 — only free/open source", "$9", "$19", "$29", "$49", "$99+"]
+    validations: {required: true}
+  - type: checkboxes
+    id: beta
+    attributes:
+      label: Founding beta
+      options:
+        - label: I would test an early beta and give feedback.

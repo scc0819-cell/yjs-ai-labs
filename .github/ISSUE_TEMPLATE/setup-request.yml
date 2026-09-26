@@ -1,0 +1,26 @@
+name: AI Stack setup request
+description: Request a paid-style setup/optimization discovery.
+title: "[Setup] "
+labels: ["service-intent", "setup"]
+body:
+  - type: markdown
+    attributes:
+      value: "This is a demand-validation request, not a purchase. No payment is taken today. Do not post secrets or confidential details."
+  - type: dropdown
+    id: stack
+    attributes:
+      label: Number of AI tools / subscriptions in regular use
+      options: ["1–2", "3–4", "5–7", "8+"]
+    validations: {required: true}
+  - type: textarea
+    id: problem
+    attributes:
+      label: What do you want optimized?
+      placeholder: "Routing, quota, context, MCP tools, local/cloud split, cost, workflow handoff..."
+    validations: {required: true}
+  - type: dropdown
+    id: budget
+    attributes:
+      label: If the setup solved it, which one-time budget is realistic?
+      options: ["Under $99", "$149", "$299", "$499", "$1,000+"]
+    validations: {required: true}

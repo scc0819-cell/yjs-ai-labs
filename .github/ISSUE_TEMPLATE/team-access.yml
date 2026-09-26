@@ -1,0 +1,32 @@
+name: Team access
+description: Validate team-level routing, budgets and governance.
+title: "[Team Access] "
+labels: ["team", "product-validation"]
+body:
+  - type: markdown
+    attributes:
+      value: "Please keep this request non-confidential. Do not post credentials or customer data."
+  - type: dropdown
+    id: size
+    attributes:
+      label: Team size
+      options: ["2–5", "6–15", "16–50", "51+"]
+    validations: {required: true}
+  - type: textarea
+    id: stack
+    attributes:
+      label: Current AI stack
+      placeholder: "Tools, models and agent frameworks your team uses."
+    validations: {required: true}
+  - type: dropdown
+    id: need
+    attributes:
+      label: Highest-value team need
+      options: ["Shared routing policy", "Budget / quota controls", "Shared context / agents", "Approvals / audit logs", "Security / permissions", "Other"]
+    validations: {required: true}
+  - type: dropdown
+    id: price
+    attributes:
+      label: Reasonable monthly team price
+      options: ["$19", "$49", "$99", "$199", "$500+"]
+    validations: {required: true}

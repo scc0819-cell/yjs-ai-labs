@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://scc0819-cell.github.io/yjs-ai-labs/sitemap.xml

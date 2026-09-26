@@ -1,0 +1,26 @@
+name: MCP / Agent security audit interest
+description: Validate demand for a focused security quick audit.
+title: "[Security Audit] "
+labels: ["security", "service-intent"]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not post endpoints, credentials, customer data or exploitable private details. This form only validates demand."
+  - type: dropdown
+    id: scope
+    attributes:
+      label: What would you want audited?
+      options: ["One MCP server", "Multiple MCP servers", "Agent tool permissions", "Agent + MCP production workflow", "Not sure"]
+    validations: {required: true}
+  - type: dropdown
+    id: concern
+    attributes:
+      label: Primary concern
+      options: ["Prompt/tool injection", "Excessive permissions", "Data leakage", "Supply-chain/dependencies", "Unapproved execution", "General readiness"]
+    validations: {required: true}
+  - type: dropdown
+    id: budget
+    attributes:
+      label: Reasonable one-time budget for a useful quick audit
+      options: ["Under $199", "$299", "$499", "$999", "$1,500+"]
+    validations: {required: true}
