@@ -6,5 +6,5 @@
 const params=new URLSearchParams(location.search);const p=params.get('offer')||'pro';const o=window.YJS_OFFERS[p]||window.YJS_OFFERS.pro;
 document.querySelector('#offer-name').textContent=o.name;document.querySelector('#offer-price').textContent=o.price;
 const source=params.get('utm_source')||localStorage.getItem('yjs_utm_source')||'direct';const medium=params.get('utm_medium')||localStorage.getItem('yjs_utm_medium')||'none';const campaign=params.get('utm_campaign')||localStorage.getItem('yjs_utm_campaign')||'organic';const content=params.get('utm_content')||localStorage.getItem('yjs_utm_content')||'none';
-const target=new URL(o.target);target.searchParams.set('title','['+p.toUpperCase()+']['+source+'/'+medium+'/'+campaign+'/'+content+'] ');document.querySelector('#intent-btn').href=target.toString();
+const target=new URL(o.target);target.searchParams.set('title','['+p.toUpperCase()+']['+source+'/'+campaign+'] [medium='+medium+';content='+content+'] ');document.querySelector('#intent-btn').href=target.toString();
 </script></body></html>
